@@ -42,6 +42,7 @@ header {
 	background-repeat: no-repeat;
 	color: #fafafa;
 }
+
 header .avatar {
 	width: 130px;
 	height: 130px;
@@ -53,6 +54,7 @@ header .avatar {
 	border: 2px solid rgba(255,255,255,0.7);
 	margin: 0 auto 15px auto;
 }
+
 header .page-description {
 	font-weight: 100;
 	font-size: .9rem;
@@ -247,26 +249,235 @@ textarea.form-control {
 	color: #fafafa;
 }
 
+/*se aclara el botón al pasarle el puntero*/
+
 .btn-default:hover {
 	background: #3498db;
 }
 
+/* Social PARA LA VERSION 1.2 */
 
 
+/* descripción debajo del nombre */
+.small {
+	font-size: .87rem;
+}
 
+.text-centro {
+	text-align: center;
+}
 
+.text-justify {
+	text-align: justify;
+}
 
+.hide {
+	display: none;
+}
 
+@media screen and (max-width: 560px) {
+	header h1 {
+		font-size: 2rem;
+	}
+	header .page-description {
+		font-size: .8rem;
+	}
+}
+@media screen and (max-width: 760px) {
+	.container .row.col-bordered .col-md-6:nth-child(1) {
+		padding-right: 0px;
+	}
+	.container .row.col-bordered .col-md-6:nth-child(2) {
+		border-left: none;
+		padding-left: 0px;
+	}
+	.portfolio-template .portfolio-module {
+		margin-bottom: 10px;
+	}
+}
+@-moz-keyframes slidetitle {
+	from {
+		transform: translateY(3px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
 
+@-webkit-keyframes slidetitle {
+	from {
+		transform: translateY(3px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
 
+/*Aquí la barra de habilidades*/
 
+progress:not(value) {
+}
+progress[value] {
+	appearance: none;
+	border: none;
+	width: 100%; height: 20px;
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+	color: royalblue;
+	position: relative;
+	margin: 0 0 1.5em; 
+}
+progress[value]::-webkit-progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
 
+progress[value]::-webkit-progress-value {
+	position: relative;
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+	animation: animate-stripes 5s linear infinite;
+}
 
+@keyframes animate-stripes { 100% { background-position: -100px 0; } }
 
+progress[value]::-webkit-progress-value:after {
+	content: '';
+	position: absolute;
+	width:5px; height:5px;
+	top:7px; right:7px;
+	background-color: white;
+	border-radius: 100%;
+}
 
+progress[value]::-moz-progress-bar {
+	background-image:
+	-moz-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -moz-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44);
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+	border-radius:3px;
+}
 
+.progress-bar {
+	background-color: whiteSmoke;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+	width: 100%; height:20px;
+}
 
+.progress-bar span {
+	background-color: royalblue;
+	border-radius: 3px;
+	display: block;
+	text-indent: -9999px;
+}
 
+p[data-value] { 
+  position: relative; 
+}
 
+p[data-value]:after {
+	content: attr(data-value) '%';
+	position: absolute; right:0;
+}
 
+.photoshop::-webkit-progress-value,
+.html::-webkit-progress-value {
+	background-image:
+	-webkit-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -webkit-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+    -webkit-linear-gradient( left, #09c, #f44);
+}
+.illustrator::-webkit-progress-value,
+.css::-webkit-progress-value {
+	background-image:
+	-webkit-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -webkit-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, #ff0);
+}
+.indesign::-webkit-progress-value,
+.js::-webkit-progress-value {
+	background-image:
+	-webkit-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -webkit-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, #690);
+}
+.photoshop::-moz-progress-bar {
+	background-image:
+	-moz-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -moz-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44);
+}
 
+.css3::-moz-progress-bar,
+.php::-moz-progress-bar {
+{
+	background-image:
+	-moz-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -moz-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #ff0);
+}
+
+.jquery::-moz-progress-bar,
+.node-js::-moz-progress-bar {
+	background-image:
+	-moz-linear-gradient( 135deg,
+	transparent,
+	transparent 33%,
+	rgba(0,0,0,.1) 33%,
+	rgba(0,0,0,.1) 66%,
+	transparent 66%),
+    -moz-linear-gradient( top,
+	rgba(255, 255, 255, .25),
+	rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #690);
+}
