@@ -189,7 +189,43 @@ footer {
 	border-radius: 5px;
 }
 
+/*formulario*/
 
+form {
+	overflow: hidden;
+	display: block;
+}
+
+input.form-control {
+	border: 1px solid #cacaca;
+	padding: 8px;
+	display: block;
+	width: 100%;
+	margin-bottom: 8px;
+	color: #555;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+textarea.form-control {
+	border: 1px solid #cacaca;
+	padding: 8px;
+	min-height: 80px;
+	display: block;
+	width: 100%;
+	resize: none;
+	font-family: sans-serif;
+	margin-bottom: 8px;
+	color: #555;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
 
 
 
