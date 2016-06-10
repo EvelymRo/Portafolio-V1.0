@@ -187,7 +187,39 @@
 				</div>
 			</div>	
 		</section>
+		<section>
+			<div class="contenedor">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<h2 class="section-title">Contacto</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<form onsubmit="return false" action="includes/email.php" method="POST">
+						<input type="text" name="name" placeholder="Nombre" class="form-control" required autocomplete="off">
+						<input type="email" name="email" placeholder="E-mail" class="form-control" required autocomplete="off">
+						<input type="text" name="website" placeholder="Website (opcional)" class="form-control" autocomplete="off">
+						<textarea name="message" class="form-control" placeholder="Mensaje"></textarea>
+						<input type="submit" value="Enviar" class="btn btn-default btn-block" onclick="sendMail();">
+						</form>
+						<br>
+					<div class="alert alert-success hide">
+						<div class="close" onclick="closeAlert()">x</div>
+							<p>El mensaje se ha enviado satisfactoriamente.</p>
+						</div>
+						<div class="alert alert-danger hide"></div>
+						<div class="close" onclick="closeAlert()">x</div>
+							<p>Ha ocurrido un error.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer></footer>
 	</main>
-
+		<div class="raw">
+			<div class="col-xs-12">&nbsp;</div>
+		</div>
 </body>
 </html>
