@@ -130,6 +130,64 @@ footer {
 	text-align: center;
 }
 
+.portfolio-template {
+	background: #2c3e50;
+	background-image: url('../img/header11.jpg');
+	background-attachment: fixed;
+	color: #fafafa;
+}
+
+.portfolio-template .portfolio-module {
+	position: relative;
+}
+
+.portfolio-template h2 {
+	color: #fafafa;
+	margin-top: 30px;
+}
+
+.portfolio-template .portfolio-title {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.8);
+	border-radius: 0 0 5px 5px;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.portfolio-template .portfolio-module:hover .portfolio-title {
+	padding: 5px;
+	height: auto;
+	
+	-moz-animation-name: slidetitle;
+	-moz-animation-timing-function: ease-out;
+	-moz-animation-duration: 0.7s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-fill-mode: forwards;
+
+	-webkit-animation-name: slidetitle;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-duration: 0.7s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.portfolio-template .portfolio-preview {
+	width: 100%;
+	border-radius: 7px;
+	height: 260px;
+	background: #ecf0f1;
+	overflow: hidden;
+}
+
+.portfolio-template .portfolio-preview img {
+	width: 100%;
+	border-radius: 5px;
+}
 
 
 
