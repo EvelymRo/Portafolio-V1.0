@@ -68,6 +68,9 @@ h1 {
 	position: center;
 }
 
+img{
+	height: 100%;
+}
 footer {
 	position: absolute;
 	display: table;
