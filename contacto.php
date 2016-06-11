@@ -17,4 +17,3 @@ echo ‘Falló el envio’;
 }
 }
 ?>
-[/php]
