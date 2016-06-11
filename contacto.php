@@ -1,19 +1,31 @@
 <?php
-$nombre = $_POST[‘nombre’];
-$email = $_POST[‘email’];
-$mensaje = $_POST[‘mensaje’];
-$para = ‘evelym_r@hotmail.com’;
-$titulo = ‘ASUNTO DEL MENSAJE’;
-$header = ‘From: ‘ . $email;
-$msjCorreo = “Nombre: $nombre\n E-Mail: $email\n Mensaje:\n $mensaje”;
-
-if ($_POST[‘submit’]) {
-if (mail($para, $titulo, $msjCorreo, $header)) {
-echo “<script language=’javascript’>
-alert(‘Mensaje enviado, muchas gracias.’);
-</script>”;
-} else {
-echo ‘Falló el envio’;
-}
-}
+	//Se inicializan las variables del formulario
+	@$nombre = addslashes($_POST['nombre']);
+	@$email = addslashes($_POST['email']);
+	@$web = addslashes($_POST['web']);
+	@$mensaje = addslashes($_POST['mensaje']);
+	//Configuración del mensaje que será enviado
+	$cabeceras = "From: evelym"
+					. "Reply-To: $email";
+	$asunto = "Envío de comentario desde el sitio web";
+	$email_to = "evelym_r@hotmail.com";
+	$contenido = "$nombre ha enviado un mensaje desde la página web"
+				. "n"
+				. "Nombre: $nombre"
+				. "Email: $email"
+				. "Sitio Web: $web"
+				. "Mensaje: $mensaje"
+				. "n";
+	//Se utiliza la función mail, de forma provisional, ya que tiene problemas de seguridad.
+	//El problema es que se puede enviar spam modificando las cabeceras
+	if (@mail($email_to, $asunto ,$contenido ,$cabeceras))
+	{
+		//Confirmación mensaje Ok
+		die("Éxito: Su mensaje se envió correctamente, nos pondremos en contacto con usted. Gracias.");
+	}
+	else
+	{
+		//Error en el envió
+		die("Error: Su mensaje no pudo ser enviado, por favor intente nuevamente.");
+	}
 ?>
