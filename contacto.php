@@ -2,7 +2,6 @@
 	//Se inicializan las variables del formulario
 	@$nombre = addslashes($_POST['nombre']);
 	@$email = addslashes($_POST['email']);
-	@$web = addslashes($_POST['web']);
 	@$mensaje = addslashes($_POST['mensaje']);
 	//Configuración del mensaje que será enviado
 	$cabeceras = "From: evelym"
@@ -13,7 +12,6 @@
 				. "n"
 				. "Nombre: $nombre"
 				. "Email: $email"
-				. "Sitio Web: $web"
 				. "Mensaje: $mensaje"
 				. "n";
 	//Se utiliza la función mail, de forma provisional, ya que tiene problemas de seguridad.
