@@ -11,7 +11,6 @@ if ($_POST[‘submit’]) {
 if (mail($para, $titulo, $msjCorreo, $header)) {
 echo “<script language=’javascript’>
 alert(‘Mensaje enviado, muchas gracias.’);
-window.location.href = ‘http://evelymro.github.io/Portafolio-V1.0/’;
 </script>”;
 } else {
 echo ‘Falló el envio’;
