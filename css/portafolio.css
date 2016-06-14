@@ -78,13 +78,62 @@ footer {
 	margin-bottom: 0;
 	width: 100%;
 	max-width: 100%;
-	height: 50px;
+	height: 80px;
 	background: #2c3e50;
 	background: url('../img/header11.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	color: #fafafa;
+}
+
+.main {
+	width:90%;
+	max-width:1000px;
+	margin:20px auto;
+}
+ 
+.slides {
+	width:100%;
+}
+ 
+.slides img {
+	width:100%;
+}
+ 
+.slidesjs-pagination {
+	background:#424242;
+	list-style:none;
+	overflow:hidden;
+}
+ 
+.slidesjs-pagination li {
+	float:left;
+}
+ 
+.slidesjs-pagination li a {
+	display:block;
+	padding:13.5px 20px;
+	color:#fff;
+	font-family: sans-serif;
+	text-decoration:none
+}
+ 
+.slidesjs-pagination li a:hover {
+	background:#000;
+}
+ 
+.slides .active {
+	background:#000;
+}
+ 
+.slidesjs-navigation{
+	background:#000;
+	color:#fff;
+	text-decoration:none;
+	display:inline-block;
+	padding:14.5px 20px;
+	float:right;
 }
 
 .social {
@@ -109,10 +158,10 @@ footer {
 	transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
 }
  
-.social ul li .icon-facebook2 {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-mail4 {background:#ff9933;} /* Establecemos los colores de cada red social, aprovechando su class */
 .social ul li .icon-twitter {background: #00abf0;}
 .social ul li .icon-github {background: #993399;}
-.social ul li .icon-mail4 {background: #666666;}
+.social ul li .icon-linkedin {background: #336699;}
  
 .social ul li a:hover {
 	background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
