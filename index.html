@@ -10,8 +10,8 @@
 	<link rel="stylesheet" href="css/portafolio.css">
 	<link rel="stylesheet" href="fonts.css">
 	<!-- Javascript -->
-	<script src="public/js/parallax.js"></script>
-	<script src="public/js/mail.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="js/responsiveslides.min.js"></script>
 </head>
 <body class="main-template">
 	<header>
@@ -133,50 +133,31 @@
 					</div>
 				</div>
 			</div>
-		</section>	
-			<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-				<script src="js/jquery.slides.js"></script>
-				<script>
-					$(function(){
-					  $(".slides").slidesjs({
-					    play: {
-					      active: true,
-					        // [boolean] Generate the play and stop buttons.
-					        // You cannot use your own buttons. Sorry.
-					      effect: "slide",
-					        // [string] Can be either "slide" or "fade".
-					      interval: 4000,
-					        // [number] Time spent on each slide in milliseconds.
-					      auto: true,
-					        // [boolean] Start playing the slideshow on load.
-					      swap: true,
-					        // [boolean] show/hide stop and play buttons
-					      pauseOnHover: false,
-					        // [boolean] pause a playing slideshow on hover
-					      restartDelay: 2500
-					        // [number] restart delay on inactive slideshow
-					    }
-					  });
-					});
-				</script>
-			<div class="slides">
-				<img src= "http://i358.photobucket.com/albums/oo28/Eve_Ro/logo1_zps3xs7zhwu.png" alt="Logotipo">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/logo2_zpsra4bxlhq.png" alt="Logotipo2">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/brand1_zps52rnykxh.png" alt="Branding">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/brand2_zpsxpwdejj4.png" alt="Branding2">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion2_zpsr2kigpn1.png" alt="Difusion1">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion5_zpsqygtlgi4.png" alt="Difusion2">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion3_zpsmvsajazu.png" alt="Difusion3">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion1_zps9w3txvtk.png" alt="Difusion4">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion4_zpsnw5bja8u.png" alt="Difusion5">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/editorial1_zpsmjusilfm.png" alt="Editorial1">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/editorial2_zpsz4cqcpci.png" alt="Editorial2">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion6_zpsnrzwg3lf.png" alt="Editorial3">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion7_zpsdyhg0yhf.png" alt="Editorial4">
-				<img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion8_zpsrznv5hnr.png" alt="Editorial5">
-			</div>
+	
+			<ul class="rslides" id="slider1">
+				<li><img src= "http://i358.photobucket.com/albums/oo28/Eve_Ro/logo1_zps3xs7zhwu.png" alt="Logotipo"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/logo2_zpsra4bxlhq.png" alt="Logotipo2"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/brand1_zps52rnykxh.png" alt="Branding"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/brand2_zpsxpwdejj4.png" alt="Branding2"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion2_zpsr2kigpn1.png" alt="Difusion1"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion5_zpsqygtlgi4.png" alt="Difusion2"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion3_zpsmvsajazu.png" alt="Difusion3"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion1_zps9w3txvtk.png" alt="Difusion4"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion4_zpsnw5bja8u.png" alt="Difusion5"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/editorial1_zpsmjusilfm.png" alt="Editorial1"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/editorial2_zpsz4cqcpci.png" alt="Editorial2"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion6_zpsnrzwg3lf.png" alt="Editorial3"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion7_zpsdyhg0yhf.png" alt="Editorial4"></li>
+				<li><img src="http://i358.photobucket.com/albums/oo28/Eve_Ro/difusion8_zpsrznv5hnr.png" alt="Editorial5"></li>
+			</ul>
+			<script>
+			  $(function() {
+			    $(".rslides").responsiveSlides();
+			  });
+			</script>
 			<footer>
 			</footer>
-		</main>
+		</section>
+	</main>
 </body>
 </html>
